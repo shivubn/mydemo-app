@@ -1,0 +1,14 @@
+FROM ubuntu
+
+MAINTAINER Jayaprakash@gmail.com
+
+RUN apt-get update && apt-get install default-jre -y
+RUN apt-get install maven -y
+
+## copy app file
+
+COPY target/users-webapp.jar /web-app.jar
+
+# run application with this command line 
+CMD ["/usr/bin/java", "-jar", "-Dspring.profiles.active=default", "/web-app.jar"]
+
