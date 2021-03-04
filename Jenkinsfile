@@ -15,7 +15,7 @@ stages{
             steps{
                 script{
                     sh '''
-                    mvn clean package
+                    mvn clean package -Dmaven.test.skip=true
                     ls -ltr target/
                     '''
                 }
