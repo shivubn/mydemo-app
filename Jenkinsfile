@@ -25,8 +25,7 @@ stages{
             steps{
                 script{
                   sh '''
-                  sudo su -
-                  docker build -t mywebimage . -f mydockerfile
+                  sudo -S docker build -t mywebimage . -f mydockerfile
                   '''
                }
           }
