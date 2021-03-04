@@ -1,4 +1,11 @@
-    stages{
+pipeline{
+    agent any
+    tools{
+        maven 'maven3.6'
+        jdk 'java8'
+        docker 'docker'
+    }  
+stages{
         stage('clone'){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/Prakashja/web-app.git'
