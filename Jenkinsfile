@@ -25,7 +25,10 @@ stages{
             steps{
                 script{
                   sh '''
-                  sudo  docker build -t mywebimage . -f mydockerfile
+                  docker login -u ${USERNAME} -p ${PASSWORD}
+                  sudo  docker build -t sana03/mywebapp . -f mydockerfile
+                  docker push sana03/mywebapp
+                  docker logout
                   '''
                }
           }
