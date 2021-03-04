@@ -25,9 +25,9 @@ stages{
             steps{
                 script{
                   sh '''
-                  sudo  docker build -t sana03/mywebapp . -f mydockerfile
-                  docker push sana03/mywebapp
-                  docker logout
+                  sudo  docker build -t sana03/mywebapp:${BUILD_NUMBER} . -f mydockerfile
+                  sudo docker push sana03/mywebapp:${BUILD_NUMBER}
+                  sudo docker logout
                   '''
                }
           }
