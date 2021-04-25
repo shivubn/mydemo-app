@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl() {
         users.add(new User(1L, "Jp", "J", "jp@yahoo.com"));
-        users.add(new User(2L, "Meghana", "A", "meghana@yahoo.com"));
+        users.add(new User(2L, "GOkul", "Nandan", "Gokul@yahoo.com"));
     }
 
     @Override
