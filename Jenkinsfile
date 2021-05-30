@@ -1,9 +1,9 @@
 pipeline{
     agent any
     tools{
-        maven 'maven3.6'
+        maven 'maven3.8.1'
         jdk 'java8'
-        dockerTool 'docker'
+        
     }  
 stages{
         stage('clone'){
@@ -21,17 +21,6 @@ stages{
                 }
             }
         }
-        stage('docker build'){
-            steps{
-                script{
-                  sh '''
-                  sudo  docker build -t sana03/mywebapp:${BUILD_NUMBER} . -f mydockerfile
-                  sudo docker push sana03/mywebapp:${BUILD_NUMBER}
-                  sudo docker logout
-                  '''
-               }
-          }
-       }
     }
 }
 
