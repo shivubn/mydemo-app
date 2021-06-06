@@ -29,6 +29,7 @@ stages{
                 sh '''
                    docker build -t myweb-app . -f mydockerfile
                    '''
-    }
+				   }
+				   
+		   }
 }
-
