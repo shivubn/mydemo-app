@@ -23,6 +23,12 @@ stages{
                 }
             }
         }
+    stage('docker build'){
+        steps{
+            script{
+                sh '''
+                   docker build -t myweb-app . -f mydockerfile
+                   '''
     }
 }
 
