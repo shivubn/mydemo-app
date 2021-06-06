@@ -27,7 +27,7 @@ stages{
         steps{
             script{
                 sh '''
-                   docker build -t myweb-app . -f mydockerfile
+                   sudo docker build -t myweb-app . -f mydockerfile
                    '''
 				   }
 				   
