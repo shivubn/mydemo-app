@@ -4,8 +4,7 @@ pipeline{
     }
     tools{
         maven 'maven3.8.1'
-        jdk 'java8'
-        
+        jdk 'java8'        
     }  
 stages{
         stage('clone'){
