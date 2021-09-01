@@ -10,7 +10,7 @@ stages{
         stage('clone'){
             steps{
                 git credentialsId: 'github', url: 'https://github.com/Prakashja/web-app.git'
-            }
+            }}
         }
         stage('build'){
             steps{

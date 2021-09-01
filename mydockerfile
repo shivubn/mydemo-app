@@ -5,7 +5,7 @@ MAINTAINER Jayaprakash@gmail.com
 RUN apt-get update && apt-get install default-jre -y
 RUN apt-get install maven -y
 
-## copy app file
+## copy app file1
 
 COPY target/users-webapp.jar /web-app.jar
 
